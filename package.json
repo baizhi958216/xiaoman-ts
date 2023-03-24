@@ -1,0 +1,20 @@
+{
+  "name": "nodejs-ts-starter",
+  "version": "1.0.0",
+  "description": "Start A TypeScript Project With NodeJS",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon --watch src/**/*.ts --exec \"ts-node\" src/app.ts"
+  },
+  "keywords": [],
+  "author": "baizhi958216",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "@types/node": "^18.15.7",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1"
+  }
+}
