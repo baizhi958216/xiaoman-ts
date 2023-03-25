@@ -7,7 +7,9 @@ var Arr = Array(Math.ceil(canvas.width / 10)).fill(0);
 var rain = function () {
     ctx.fillStyle = "rgba(0,0,0,0.05)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "#0f0";
+    //   太卡了
+    ctx.fillStyle = "#".concat(Math.floor(Math.random() * 10)).concat(Math.floor(Math.random() * 10)).concat(Math.floor(Math.random() * 10));
+    //   ctx.fillStyle = "#0f0";
     Arr.forEach(function (item, index) {
         ctx.fillText(str[Math.floor(Math.random() * str.length)], index * 10, item + 10);
         Arr[index] =

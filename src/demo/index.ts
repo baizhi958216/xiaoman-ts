@@ -9,7 +9,11 @@ let Arr = Array(Math.ceil(canvas.width / 10)).fill(0);
 const rain = () => {
   ctx.fillStyle = "rgba(0,0,0,0.05)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = "#0f0";
+  //   太卡了
+  ctx.fillStyle = `#${Math.floor(Math.random() * 10)}${Math.floor(
+    Math.random() * 10
+  )}${Math.floor(Math.random() * 10)}`;
+  //   ctx.fillStyle = "#0f0";
   Arr.forEach((item, index) => {
     ctx.fillText(
       str[Math.floor(Math.random() * str.length)],
