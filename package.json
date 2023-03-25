@@ -4,7 +4,8 @@
   "description": "Start A TypeScript Project With NodeJS",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon --watch src/**/*.ts --exec \"ts-node\" src/app.ts"
+    "start": "nodemon --watch src/**/*.ts --exec \"ts-node\" src/app.ts",
+    "demo": "tsc -w src/demo/index.ts"
   },
   "keywords": [],
   "author": "baizhi958216",

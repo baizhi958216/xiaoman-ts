@@ -5,6 +5,7 @@ import { p04 } from "./courses/p04";
 import { p05 } from "./courses/p05";
 import { p06 } from "./courses/p06";
 import { p07 } from "./courses/p07";
+import { p08 } from "./courses/p08";
 
 p01();
 p02();
@@ -13,3 +14,4 @@ p04();
 p05();
 p06();
 p07();
+p08();
