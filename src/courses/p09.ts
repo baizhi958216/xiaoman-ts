@@ -31,19 +31,26 @@ const p09 = () => {
      */
     children?: Vnode[];
   }
-
+  /* 
   //  简单版虚拟DOM实现
   class Dom {
+    private name: string;
+    // 给子类super
+    constructor(name: string) {
+      this.name = name;
+    }
     // 创建节点
-    createElement(el: string) {
+    // private 只能自己调用, 不允许子类也不允许在外部使用
+    private createElement(el: string) {
       return document.createElement(el);
     }
     // 填充文本
-    setText(el: HTMLElement, text: string | null) {
+    private setText(el: HTMLElement, text: string | null) {
       el.textContent = text;
     }
     // 渲染函数
-    render(data: Vnode): Node {
+    //protected 给子类和内部使用
+    protected render(data: Vnode): Node {
       let root = this.createElement(data.tag);
       if (data.text) {
         this.setText(root, data.text);
@@ -66,12 +73,22 @@ const p09 = () => {
   class Vue extends Dom implements VueCls {
     options: Options;
     constructor(options: Options) {
-      // 父类的prototype.constructor.call
-      super();
+      // super指向父类的prototype.constructor.call
+      super("小满");
       this.options = options;
       this.init();
     }
-    init(): void {
+
+    static xxx() {}
+
+    static version() {
+      // 静态方法的this指向该类下的静态方法, 没加static无法相互调用
+      this.xxx;
+      return "1.0.0";
+    }
+
+    // public 默认的都是public, 内部、子类、外部都允许使用
+    public init(): void {
       // 虚拟Dom: 通过js渲染真实Dom
       let data: Vnode = {
         tag: "div",
@@ -108,5 +125,31 @@ const p09 = () => {
   new Vue({
     el: "#app",
   });
+
+  //如果不使用new, 直接使用的实例本身的方法就是静态方法
+  Vue.version();
+ */
+
+  /* 
+  // get set
+  // 自定义读取跟设置操作, 做拦截器
+  class Ref {
+    _value: any;
+    constructor(value: any) {
+      this._value = value;
+    }
+
+    get value() {
+      return this._value + "vvv";
+    }
+
+    set value(newVal) {
+      this._value = newVal + "小满";
+    }
+  }
+  const ref = new Ref("哈哈哈");
+  ref.value = "坏人";
+  console.log(ref.value);
+   */
 };
 export { p09 };
