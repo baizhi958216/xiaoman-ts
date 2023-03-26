@@ -15,6 +15,7 @@ import { p14 } from "./courses/p14";
 import { p15 } from "./courses/p15";
 import { p16 } from "./courses/p16";
 import { p17 } from "./courses/p17";
+import { p18 } from "./courses/p18";
 
 p01();
 p02();
@@ -33,3 +34,4 @@ p14();
 p15();
 p16();
 p17();
+p18();
