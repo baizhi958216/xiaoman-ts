@@ -11,6 +11,7 @@ import { p10 } from "./courses/p10";
 import { p11 } from "./courses/p11";
 import { p12 } from "./courses/p12";
 import { p13 } from "./courses/p13";
+import { p14 } from "./courses/p14";
 
 p01();
 p02();
@@ -25,3 +26,4 @@ p10();
 p11();
 p12();
 p13();
+p14();
