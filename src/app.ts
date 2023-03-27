@@ -18,6 +18,7 @@ import { p17 } from "./courses/p17";
 import { p18 } from "./courses/p18";
 import { p20 } from "./courses/p20";
 import { p21 } from "./courses/p21";
+import { p22 } from "./courses/p22";
 
 p01();
 p02();
@@ -39,3 +40,4 @@ p17();
 p18();
 p20();
 p21();
+p22();
