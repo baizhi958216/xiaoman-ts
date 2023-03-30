@@ -19,8 +19,9 @@ import { p18 } from "./courses/p18";
 import { p20 } from "./courses/p20";
 import { p21 } from "./courses/p21";
 import { p22 } from "./courses/p22";
+import { p23 } from "./courses/p23";
 
-p01();
+/* p01();
 p02();
 p03();
 p04();
@@ -40,4 +41,5 @@ p17();
 p18();
 p20();
 p21();
-p22();
+p22(); */
+p23();

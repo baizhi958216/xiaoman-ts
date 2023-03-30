@@ -32,7 +32,7 @@
     // "noUnusedLocals": true /*提示声明但未使用的局部变量*/,
     // "noUnusedParameters": true /*提示未使用的函数参数*/,
     // "noFallthroughCasesInSwitch": true /*防止switch贯穿, 没有break后面的都不执行*/,
-    // "moduleResolution": "node" /*模块是怎样导入的, node默认(相对的方式)*/,
+    "moduleResolution": "node" /*模块是怎样导入的, node默认(相对的方式)*/,
     "baseUrl": "./" /*非相对模块的基地址*/
     // "jsxFactory": "React.createElement" /*jsx语法的解析器*/,
     // "jsx": "react" /*jsx解析器, 对应jsxFactory就是React.createElement, 也就是不需要定义jsxFactory*/,
