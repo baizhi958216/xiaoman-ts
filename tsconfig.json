@@ -6,7 +6,7 @@
     "target": "ES2022" /*目标编译语言*/,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "module": "UMD" /*生成代码标准, UMD包含了AMD跟CommonJS, 支持多模块规范*/,
+    "module": "ES2022" /*生成代码标准, UMD包含了AMD跟CommonJS, 支持多模块规范*/,
     // "lib": ["DOM", "ES2015", "ScriptHost", "ES2019.Array"] /*TS的生明文件*/,
     // "allowJs": true,/*允许编译js,jsx文件*/
     // "checkJs": true,/*允许检查js文件, 与allowJs一起用*/
