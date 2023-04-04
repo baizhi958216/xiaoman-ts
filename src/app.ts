@@ -51,6 +51,11 @@ if (process.env.NODE_ENV === "development") {
   console.log("开发");
 } else {
   console.log("生产");
-} */
+}
 let a: string = "webpack + TS";
-console.log(a);
+console.log(a); */
+export const a: number = 1;
+export const b: string = "ikun";
+let x = 1;
+let fn = () => 123;
+console.log(x, fn);
