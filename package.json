@@ -7,13 +7,20 @@
     "start": "nodemon --watch src/**/*.ts --exec \"ts-node\" src/app.ts",
     "demo": "tsc -w src/demo/index.ts",
     "build": "cross-env NODE_ENV=production rollup -c --bundleConfigAsCjs",
-    "dev": "cross-env NODE_ENV=development rollup -c --bundleConfigAsCjs -w"
+    "dev": "cross-env NODE_ENV=development rollup -c --bundleConfigAsCjs -w",
+    "devwebpack": "webpack-dev-server",
+    "buildwebpack": "webpack"
   },
   "keywords": [],
   "author": "baizhi958216",
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^5.0.2"
+    "html-webpack-plugin": "^5.5.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.2",
+    "webpack": "^5.77.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.2"
   },
   "dependencies": {
     "@rollup/plugin-node-resolve": "^15.0.1",

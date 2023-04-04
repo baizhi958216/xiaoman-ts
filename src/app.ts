@@ -44,11 +44,13 @@ p20();
 p21();
 p22();
 p23();
-p24(); */
+p24();
 const a: string = "小满好短sss";
 console.log(a);
 if (process.env.NODE_ENV === "development") {
   console.log("开发");
 } else {
   console.log("生产");
-}
+} */
+let a: string = "webpack + TS";
+console.log(a);
