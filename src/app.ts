@@ -21,6 +21,8 @@ import { p21 } from "./courses/p21";
 import { p22 } from "./courses/p22";
 import { p23 } from "./courses/p23";
 import { p24 } from "./courses/p24";
+import { Dictionaries } from "./enum";
+import { Data, Expire, Key, Result, StorageCls } from "./type";
 
 /* p01();
 p02();
@@ -53,9 +55,52 @@ if (process.env.NODE_ENV === "development") {
   console.log("生产");
 }
 let a: string = "webpack + TS";
-console.log(a); */
+console.log(a);
 export const a: number = 1;
 export const b: string = "ikun";
 let x = 1;
 let fn = () => 123;
-console.log(x, fn);
+console.log(x, fn); */
+export class Storage implements StorageCls {
+  get<T>(key: Key): Result<T | null> {
+    const value = localStorage.getItem(key);
+    if (value) {
+      const data: Data<T> = JSON.parse(value);
+      const now = new Date().getTime();
+      if (
+        typeof data[Dictionaries.expire] == "number" &&
+        data[Dictionaries.expire] < now
+      ) {
+        this.remove(key);
+        return {
+          message: `您的${key}已过期`,
+          value: null,
+        };
+      } else {
+        return {
+          message: "成功",
+          value: data.value,
+        };
+      }
+    } else {
+      return {
+        message: "值无效",
+        value: null,
+      };
+    }
+  }
+  set<T>(key: Key, value: T, expire: Expire = Dictionaries.permanent) {
+    const data = {
+      value,
+      [Dictionaries.expire]: expire,
+    };
+
+    localStorage.setItem(key, JSON.stringify(data));
+  }
+  remove(key: Key) {
+    localStorage.removeItem(key);
+  }
+  clear() {
+    localStorage.clear();
+  }
+}

@@ -4,7 +4,9 @@ import serve from "rollup-plugin-serve";
 import livereload from "rollup-plugin-livereload";
 import terser from "@rollup/plugin-terser";
 import replace from "@rollup/plugin-replace";
-
+import { fileURLToPath } from "url";
+const metaUrl = fileURLToPath(import.meta.url);
+const dirName = path.dirname(metaUrl);
 const isDev = () => {
   return process.env.NODE_ENV === "development";
 };
@@ -12,9 +14,10 @@ const isDev = () => {
 export default {
   input: "./src/app.ts",
   output: {
-    file: path.resolve(__dirname, "./lib/index.js"),
-    format: "umd",
+    file: path.resolve(dirName, "./lib/index.js"),
+    // format: "umd",
     sourcemap: true,
+    name: "file",
   },
   plugins: [
     ts(),
