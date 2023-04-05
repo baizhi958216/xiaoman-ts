@@ -22,6 +22,7 @@ import { p22 } from "./courses/p22";
 import { p23 } from "./courses/p23";
 import { p24 } from "./courses/p24";
 import { p29 } from "./courses/p29";
+import { p30 } from "./courses/p30";
 import { Dictionaries } from "./enum";
 import { Data, Expire, Key, Result, StorageCls } from "./type";
 
@@ -104,5 +105,6 @@ export class Storage implements StorageCls {
   clear() {
     localStorage.clear();
   }
-} */
-p29();
+}
+p29(); */
+p30();
