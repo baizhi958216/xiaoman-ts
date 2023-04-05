@@ -21,6 +21,7 @@ import { p21 } from "./courses/p21";
 import { p22 } from "./courses/p22";
 import { p23 } from "./courses/p23";
 import { p24 } from "./courses/p24";
+import { p29 } from "./courses/p29";
 import { Dictionaries } from "./enum";
 import { Data, Expire, Key, Result, StorageCls } from "./type";
 
@@ -60,7 +61,7 @@ export const a: number = 1;
 export const b: string = "ikun";
 let x = 1;
 let fn = () => 123;
-console.log(x, fn); */
+console.log(x, fn);
 export class Storage implements StorageCls {
   get<T>(key: Key): Result<T | null> {
     const value = localStorage.getItem(key);
@@ -103,4 +104,5 @@ export class Storage implements StorageCls {
   clear() {
     localStorage.clear();
   }
-}
+} */
+p29();

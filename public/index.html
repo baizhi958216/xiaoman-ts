@@ -7,13 +7,6 @@
     <title>Document</title>
   </head>
   <body>
-    <script type="module">
-      import { Storage } from "../lib/index.js";
-      const ls = new Storage();
-      ls.set("a", 123, new Date().getTime() + 5000);
-      setInterval(() => {
-        console.log(ls.get("a"));
-      }, 800);
-    </script>
+    <script src="../lib/index.js"></script>
   </body>
 </html>
