@@ -26,6 +26,7 @@ import { p30 } from "./courses/p30";
 import { p31 } from "./courses/p31";
 import { p32 } from "./courses/p32";
 import { p33 } from "./courses/p33";
+import { p34 } from "./courses/p34";
 
 /* p01();
 p02();
@@ -110,5 +111,6 @@ export class Storage implements StorageCls {
 p29();
 p30();
 p31();
-p32(); */
-p33();
+p32();
+p33(); */
+p34();
