@@ -28,6 +28,7 @@ import { p32 } from "./courses/p32";
 import { p33 } from "./courses/p33";
 import { p34 } from "./courses/p34";
 import { p35 } from "./courses/p35";
+import { p36 } from "./courses/p36";
 
 /* p01();
 p02();
@@ -114,5 +115,6 @@ p30();
 p31();
 p32();
 p33();
-p34(); */
-p35();
+p34();
+p35(); */
+p36();
